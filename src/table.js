@@ -63,15 +63,15 @@ const Table_data = ()=> {
     },[])
 
 
-    // const Short_Url = async (str) => {
-    //     let response = await axios.get(`http://localhost:5000/${str}`)
-    //     let res = await axios.post(`http://localhost:5000/${str}`)
-    //     if (response) {
-    //         console.log(clicks)
-    //         setClicks(res.data.clicks)
-    //         window.open(`https://${response.data}`, '_blank')
-    //     }
-    // }
+    const Short_Url = async (str) => {
+        let response = await axios.get(`https://myurl-shortner.netlify.app/${str}`)
+        let res = await axios.post(`https://myurl-shortner.netlify.app/${str}`)
+        if (response) {
+            console.log(clicks)
+            setClicks(res.data.clicks)
+            window.open(`https://${response.data}`, '_blank')
+        }
+    }
 
     return (
         <>
@@ -90,7 +90,7 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
-                                    <StyledTableCell><Link underline="none" href={`https://day-45.herokuapp.com/${ShortUrl[i]}`} target="_blank" >{ShortUrl[i]}</Link></StyledTableCell>
+                                    <StyledTableCell><Link underline="none" href={`https://day-45.herokuapp.com/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>
