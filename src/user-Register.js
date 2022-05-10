@@ -39,7 +39,7 @@ export default function SignUp() {
     })
     const handleSubmit = async (e,onSubmitProps) => {
        try{
-            let response = await axios.post('http://localhost:5000/register',{
+            let response = await axios.post('https://day-45.herokuapp.com/register',{
                 user : e
             })
             if(!response.data.msg && response.status === 200){

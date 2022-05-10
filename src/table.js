@@ -48,7 +48,7 @@ const Table_data = ()=> {
             try {
                 let token = jwtDecode(localStorage.getItem('token'))
                 let id = token.user._id
-                await axios.get(`http://localhost:5000/links/${id}`).then((res) => {
+                await axios.get(`https://day-45.herokuapp.com/links/${id}`).then((res) => {
                     setData(res.data)
                     setClicks(res.data.clicks)
                     setFullUrl(res.data.url)
@@ -90,7 +90,7 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
-                                    <StyledTableCell><Link underline="none" href={`http://localhost:5000/${ShortUrl[i]}`} >{ShortUrl[i]}</Link></StyledTableCell>
+                                    <StyledTableCell><Link underline="none" href={`https://day-45.herokuapp.com/${ShortUrl[i]}`} >{ShortUrl[i]}</Link></StyledTableCell>
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>

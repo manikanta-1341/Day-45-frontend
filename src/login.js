@@ -20,7 +20,7 @@ function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
+            <Link color="inherit" href="#">
                 Your Website
             </Link>{' '}
             {new Date().getFullYear()}
@@ -40,7 +40,7 @@ export default function SignIn() {
     const handleSubmit = async (e) => {
         // console.log(e)
         try {
-            let response = await axios.post('http://localhost:5000/login', {
+            let response = await axios.post('https://day-45.herokuapp.com/login', {
                 username: e.email,
                 password: e.password
             })

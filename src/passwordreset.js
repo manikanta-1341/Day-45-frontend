@@ -11,7 +11,7 @@ export default function Passwordreset() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.put('http://localhost:5000/forgetpassword', {
+            const response = await axios.put('https://day-45.herokuapp.com/forgetpassword', {
                 email: email
             })
             if (response.status === 200) {

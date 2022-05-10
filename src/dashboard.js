@@ -43,7 +43,7 @@ const Dashboard = () => {
         const getData = async () => {
 
             try {
-                await axios.get("http://localhost:5000/links/daycount").then((res) => {
+                await axios.get("https://day-45.herokuapp.com/links/daycount").then((res) => {
                     setDayCount(res.data.day)
                     setMonthCount(res.data.month)
                     setYearCount(res.data.year)

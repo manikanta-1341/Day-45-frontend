@@ -45,7 +45,7 @@ const Links = ()=> {
         let token = jwtDecode(localStorage.getItem('token'));
         let id = token.user._id;
         // console.log(id)
-        let response = await axios.post(`http://localhost:5000/links/${id}`, {
+        let response = await axios.post(`https://day-45.herokuapp.com/links/${id}`, {
             url: e.url
         });
         if (!response.data.msg) {

@@ -24,7 +24,7 @@ export default function ResetForm() {
         if(token.exp * 1000 >= Date.now()){
             if (password === conpassword ) {
                 try {
-                    let response = await axios.post(`http://localhost:5000/savepassword/${id}`, {
+                    let response = await axios.post(`https://day-45.herokuapp.com/savepassword/${id}`, {
                         password: password
                     })
                     if(response.status === 200)
