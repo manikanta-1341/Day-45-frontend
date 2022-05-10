@@ -90,7 +90,7 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
-                                    <StyledTableCell><Link underline="none" href={`https://day-45.herokuapp.com/${ShortUrl[i]}` target="_blank"} >{ShortUrl[i]}</Link></StyledTableCell>
+                                    <StyledTableCell><Link underline="none" href={`https://day-45.herokuapp.com/${ShortUrl[i]}`} target="_blank" >{ShortUrl[i]}</Link></StyledTableCell>
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>
