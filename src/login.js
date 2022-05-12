@@ -45,7 +45,7 @@ export default function SignIn() {
                 username: e.email,
                 password: e.password
             })
-            // console.log(response)
+            console.log(response)
             if (!response.data.msg) {
                 window.localStorage.setItem('token', response.data)
                 nav('/dashboard')
