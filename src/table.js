@@ -65,7 +65,7 @@ const Table_data = ()=> {
 
 
     const Short_Url = async (str) => {
-        console.log("in short:::::\n")
+        // console.log("in short:::::\n")
         let response = await axios.get(`${url}/${str}`)
         let res = await axios.post(`${url}/${str}`)
         console.log(response,res)
@@ -93,7 +93,7 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
-                                    <StyledTableCell><Link underline="none" onClick={() => Short_Url(ShortUrl[i])}  href="#">{ShortUrl[i]}</Link></StyledTableCell>
+                                    <StyledTableCell><Link underline="none"   href={`${url}/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>
