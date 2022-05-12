@@ -101,7 +101,11 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
+<<<<<<< HEAD
                                     <StyledTableCell><Link underline="none" onClick={() => Short_Url(ShortUrl[i])} target="_blank"  href={`${url}/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
+=======
+                                    <StyledTableCell><Link underline="none" target="_blank"  href={`${url}/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
+>>>>>>> 3ed5285700809fdcfaf2cf92d3c87523f5de81ed
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>
