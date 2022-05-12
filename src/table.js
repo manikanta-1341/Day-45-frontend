@@ -72,6 +72,10 @@ const Table_data = ()=> {
             if(res.data.msg){
                 console.log(res.data.msg)
             }
+            else{
+                setClicks(res.data.clicks)
+
+            }
         }
         catch(err){
             console.log(err)
