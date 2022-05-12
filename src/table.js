@@ -93,7 +93,7 @@ const Table_data = ()=> {
                             {FullUrl.map((row, i) => (
                                 <StyledTableRow key={i + 1}>
                                     <StyledTableCell>{row}</StyledTableCell>
-                                    <StyledTableCell><Link underline="none"   href={`${url}/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
+                                    <StyledTableCell><Link underline="none" target="_blank"  href={`${url}/${ShortUrl[i]}`}>{ShortUrl[i]}</Link></StyledTableCell>
                                     <StyledTableCell>{clicks[i]}</StyledTableCell>
                                     <StyledTableCell>{data.createdAt[i].substring(0, 10)}</StyledTableCell>
                                 </StyledTableRow>
