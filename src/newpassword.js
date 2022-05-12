@@ -9,6 +9,7 @@ export default function ResetForm() {
     const token = jwtDecode(window.location.search.split("?")[1].split("=")[1])
     // console.log(token, Date.now())
     const nav = useNavigate()
+   const [url,setUrl] = useState("https://day-45.herokuapp.com")
 
     useEffect(() => {
         if (token.exp * 1000 <= Date.now()) {
@@ -24,7 +25,7 @@ export default function ResetForm() {
         if(token.exp * 1000 >= Date.now()){
             if (password === conpassword ) {
                 try {
-                    let response = await axios.post(`https://day-45.herokuapp.com/savepassword/${id}`, {
+                    let response = await axios.post(`${url}/savepassword/${id}`, {
                         password: password
                     })
                     if(response.status === 200)

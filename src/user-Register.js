@@ -37,9 +37,11 @@ export default function SignUp() {
         lastname: "",
         password: ""
     })
+    const [url,setUrl] = useState("https://day-45.herokuapp.com")
+
     const handleSubmit = async (e,onSubmitProps) => {
        try{
-            let response = await axios.post('https://day-45.herokuapp.com/register',{
+            let response = await axios.post(`${url}/register`,{
                 user : e
             })
             if(!response.data.msg && response.status === 200){

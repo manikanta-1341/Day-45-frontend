@@ -38,12 +38,13 @@ const Dashboard = () => {
     const [MonthCount, setMonthCount] = useState('')
     const [YearCount, setYearCount] = useState('')
     const nav = useNavigate()
-
+   const [url,setUrl] = useState("https://day-45.herokuapp.com")
+   
     useEffect(() => {
         const getData = async () => {
 
             try {
-                await axios.get("https://day-45.herokuapp.com/links/daycount").then((res) => {
+                await axios.get(`${url}/links/daycount`).then((res) => {
                     setDayCount(res.data.day)
                     setMonthCount(res.data.month)
                     setYearCount(res.data.year)

@@ -30,6 +30,8 @@ export default function Dashboard_check() {
 
 const Links = ()=> {
     const nav = useNavigate();
+   const [url,setUrl] = useState("https://day-45.herokuapp.com")
+
     let initialvalues = {
         url: ""
     };
@@ -45,7 +47,7 @@ const Links = ()=> {
         let token = jwtDecode(localStorage.getItem('token'));
         let id = token.user._id;
         // console.log(id)
-        let response = await axios.post(`https://day-45.herokuapp.com/links/${id}`, {
+        let response = await axios.post(`${url}/links/${id}`, {
             url: e.url
         });
         if (!response.data.msg) {

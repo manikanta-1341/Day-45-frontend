@@ -7,11 +7,11 @@ import { Typography, TextField, Button } from '@mui/material';
 
 export default function Passwordreset() {
     const [email, setEmail] = React.useState('')
-
+    const [url,setUrl] = useState("https://day-45.herokuapp.com")
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.put('https://day-45.herokuapp.com/forgetpassword', {
+            const response = await axios.put(`${url}/forgetpassword`, {
                 email: email
             })
             if (response.status === 200) {
