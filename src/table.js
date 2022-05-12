@@ -67,6 +67,7 @@ const Table_data = ()=> {
     const Short_Url = async (str) => {
         let response = await axios.get(`${url}/${str}`)
         let res = await axios.post(`${url}/${str}`)
+        console.log(response,res)
         if (response) {
             console.log(clicks)
             setClicks(res.data.clicks)
