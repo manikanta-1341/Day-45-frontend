@@ -65,6 +65,7 @@ const Table_data = ()=> {
 
 
     const Short_Url = async (str) => {
+        console.log("in short:::::\n")
         let response = await axios.get(`${url}/${str}`)
         let res = await axios.post(`${url}/${str}`)
         console.log(response,res)
