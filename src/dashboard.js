@@ -74,6 +74,8 @@ const Dashboard = () => {
                     justifyContent="space-between"
                     alignItems="center" sx={{ mb: 4 }}>
                     <Grid ><Button variant="contained" onClick={() => nav('/links')}>Create Short Url</Button></Grid>
+                    <Grid><Button variant="contained" sx={{mt : "5%"}} onClick={() =>nav('/table')}>Your Links</Button>
+                    </Grid>
                     <Grid ><Button variant="contained" sx={{ float: "right" }} onClick={() => Logout()}>Logout</Button></Grid>
 
                 </Grid>

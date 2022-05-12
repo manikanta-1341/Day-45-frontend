@@ -65,7 +65,7 @@ const Links = ()=> {
                     values, errors, touched, handleChange, handleBlur, handleSubmit,
                 }) => (
                     <Container >
-                            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt:"10%", width: "100%", maxWidth: "60rem", display: "flex", justifyContent: "space-evenly" }}>
+                            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mx : "auto",mt:"18%", width: "100%", maxWidth: "60rem", display: "flex", justifyContent: "space-evenly" }}>
                             <TextField
                                 margin="normal"
                                 required
@@ -87,7 +87,6 @@ const Links = ()=> {
                                 Convert
                             </Button>
                             </Box>
-                            <Button variant="contained" sx={{mt : "5%"}} onClick={() =>nav('/table')}>Your Links</Button>
                     </Container>
                 )}
             </Formik>
