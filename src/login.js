@@ -41,7 +41,7 @@ export default function SignIn() {
     const handleSubmit = async (e) => {
         // console.log(e)
         try {
-            let response = await axios.post(`${url}login`, {
+            let response = await axios.post(`${url}/login`, {
                 username: e.email,
                 password: e.password
             })
